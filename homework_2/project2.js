@@ -29,12 +29,11 @@ function ApplyTransform( trans1, trans2 )
     for (let row = 0; row < 3; row++) {
         for (let col = 0; col < 3; col++) {
             result[col * 3 + row] =
-                trans1[0 * 3 + row] * trans2[col * 3 + 0] +
-                trans1[1 * 3 + row] * trans2[col * 3 + 1] +
-                trans1[2 * 3 + row] * trans2[col * 3 + 2];
+    			trans2[0 * 3 + row] * trans1[col * 3 + 0] +
+    			trans2[1 * 3 + row] * trans1[col * 3 + 1] +
+    			trans2[2 * 3 + row] * trans1[col * 3 + 2];
         }
     }
 
     return result;
 }
-
